@@ -2,9 +2,7 @@
   color: $primary-color;
   text-align: center;
 
-  background:
-  url("../img/index-background-mobile@1x.jpg") no-repeat center top,
-  linear-gradient(180deg, $content-color 305px, transparent 50%);
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat center top, linear-gradient(180deg, $content-color 305px, transparent 50%);
 }
 
 .diet-programm__sub-title {

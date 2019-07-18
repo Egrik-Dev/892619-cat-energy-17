@@ -1,0 +1,35 @@
+.social__list {
+  display: flex;
+  align-items: center;
+  @include reset-list;
+}
+
+.social__item {
+  margin-right: 40px;
+}
+
+.social__link {
+  display: block;
+
+  &--vk {
+    width: 22px;
+    height: 12px;
+
+    background: url("../img/icon-vk.svg") no-repeat 0 0;
+  }
+
+  &--instagram {
+    width: 16px;
+    height: 16px;
+
+    background: url("../img/icon-insta.svg") no-repeat 0 0;
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+
+    background: url("../img/icon-fb.svg") no-repeat 0 0;
+  }
+}
+

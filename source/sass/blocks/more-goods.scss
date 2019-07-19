@@ -1,0 +1,29 @@
+.more-goods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-goods__image-plus {
+  padding: 26px 0;
+
+  opacity: 0.2;
+}
+
+.more-goods__text {
+  color: $title-color;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.more-goods__description {
+  margin: 0;
+  padding: 10px 0 20px;
+
+  font-family: $second-font;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}

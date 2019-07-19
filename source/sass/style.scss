@@ -1,0 +1,95 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: $main-font, $second-font, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $text-color;
+  background-color: $primary-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  margin: 26px 0;
+
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  color: $title-color;
+
+  &--main {
+    line-height: 36px;
+    color: $primary-color;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 0;
+  width: 280px;
+
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  color: $primary-color;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  background-color: $content-color;
+  border: none;
+
+  &--grey {
+    color: $text-color;
+
+    background-color: $bg-block-color;
+  }
+}
+
+.wrapper-flex {
+  display: flex;
+}
+
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/site-list.scss";
+@import "blocks/diet-programm.scss";
+@import "blocks/page-main.scss";
+@import "blocks/services.scss";
+@import "blocks/advantages.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/site-developer.scss";
+@import "blocks/products.scss";
+@import "blocks/more-goods.scss";

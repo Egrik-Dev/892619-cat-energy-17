@@ -1,0 +1,23 @@
+.page-footer {
+  padding: 39px 20px 22px;
+
+  background-color: $bg-block-color;
+}
+
+.page-footer__logo {
+  padding-bottom: 31px;
+
+  text-align: center;
+
+  @include border-bottom;
+}
+
+.page-footer__social {
+  padding: 20px 70px;
+
+  @include border-bottom;
+}
+
+.page-footer__site-developer {
+  padding-top: 20px;
+}

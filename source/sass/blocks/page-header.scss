@@ -1,0 +1,28 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.page-header__logo-image {
+  margin-bottom: 15px;
+
+  text-align: center;
+}
+
+.page-header__toggle {
+  padding: 20px 0;
+  width: 24px;
+  height: 18px;
+
+  border: 0;
+  background: transparent url("../img/icon-mobile-menu.svg") no-repeat center center;
+
+  cursor: pointer;
+}

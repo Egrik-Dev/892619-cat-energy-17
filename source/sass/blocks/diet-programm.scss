@@ -1,4 +1,8 @@
 .diet-programm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   color: $primary-color;
   text-align: center;
 

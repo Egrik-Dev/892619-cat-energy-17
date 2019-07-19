@@ -1,5 +1,6 @@
 .social__list {
   display: flex;
+  justify-content: center;
   align-items: center;
 
   @include reset-list;
@@ -7,6 +8,10 @@
 
 .social__item {
   margin-right: 40px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 .social__link {

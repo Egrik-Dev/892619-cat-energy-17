@@ -4,7 +4,16 @@
 }
 
 .products__item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
   border-bottom: 1px solid $border-goods-color;
+}
+
+.products__description {
+  display: flex;
+  flex-direction: column;
 }
 
 .products__title {
@@ -26,13 +35,13 @@
 }
 
 .products__field {
-  width: 91px;
+  width: 3000px;
 
   text-align: right;
 }
 
 .btn--products {
-  width: 280px;
+  width: auto;
   margin-bottom: 25px;
 }
 

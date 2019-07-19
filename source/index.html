@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -9,8 +10,10 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Логотип магазина Cat-Energy">
-      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="page-header__wrapper">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Логотип магазина Cat-Energy">
+        <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list_item--active"><a>Главная</a></li>
@@ -22,10 +25,10 @@
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин правильного питания для котов CatEnergy</h1>
       <section class="page-main__diet-programm diet-programm">
-        <h2 class="title title--main">Функциональное питание для котов</h2>
-        <p class="diet-programm__sub-title">Занялся собой? Займись котом!</p>
-        <img class="diet-programm__food-image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Упаковка Cat-Energy Pro с курицей">
-        <a href="#" class="diet-programm__select btn">Подобрать программу</a>
+          <h2 class="title title--main">Функциональное питание для котов</h2>
+          <p class="diet-programm__sub-title">Занялся собой? Займись котом!</p>
+          <img class="diet-programm__food-image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Упаковка Cat-Energy Pro с курицей">
+          <a href="#" class="diet-programm__select btn">Подобрать программу</a>
       </section>
       <section class="page-main__services services">
         <h2 class="visually-hidden">Список программ для набора и потери массы</h2>

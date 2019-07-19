@@ -1,4 +1,3 @@
-@import "normalize.scss";
 @import "variables.scss";
 @import "mixins.scss";
 
@@ -41,7 +40,7 @@ input[type="radio"].visually-hidden {
 }
 
 .title {
-  margin-bottom: 30px;
+  margin: 26px 0;
 
   font-size: 36px;
   line-height: 60px;
@@ -49,8 +48,6 @@ input[type="radio"].visually-hidden {
   color: $title-color;
 
   &--main {
-    padding: 25px 35px;
-
     line-height: 36px;
     color: $primary-color;
   }
@@ -82,8 +79,6 @@ input[type="radio"].visually-hidden {
 
 .wrapper-flex {
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 20px;
 }
 
 @import "blocks/page-header.scss";

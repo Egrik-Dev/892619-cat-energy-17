@@ -9,7 +9,7 @@
 .social__item {
   margin-right: 40px;
 
-  &:nth-child(3n) {
+  &:nth-last-child(1) {
     margin-right: 0;
   }
 }
@@ -36,5 +36,34 @@
     height: 19px;
 
     background: url("../img/icon-fb.svg") no-repeat 0 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__item {
+    margin-right: 28px;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+
+  .social__link {
+    display: block;
+
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

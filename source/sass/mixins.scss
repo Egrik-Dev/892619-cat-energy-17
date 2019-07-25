@@ -7,3 +7,8 @@
 @mixin border-bottom {
   border-bottom: 1px solid $border-color;
 }
+
+@mixin big-title {
+  font-size: 60px;
+  line-height: 60px;
+}

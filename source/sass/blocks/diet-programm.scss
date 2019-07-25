@@ -4,9 +4,14 @@
   align-items: center;
 
   color: $primary-color;
-  text-align: center;
 
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat center top, linear-gradient(180deg, $content-color 305px, transparent 50%);
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat center top, linear-gradient(180deg, transparent 305px, #ffffff 50%), linear-gradient(90deg, #65a93c 50%, #63a73a 50%);
+}
+
+.diet-programm__title {
+  text-align: center;
+  line-height: 36px;
+  color: $primary-color;
 }
 
 .diet-programm__sub-title {
@@ -18,10 +23,101 @@
   text-transform: uppercase;
 }
 
-.diet-programm__food-image {
+.diet-programm__image-small {
   margin-bottom: 3px;
+}
+
+.diet-programm__image-middle {
+  display: none;
+}
+
+.diet-programm__image-big {
+  display: none;
 }
 
 .diet-programm__select {
   width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  .diet-programm {
+    position: relative;
+
+    align-items: flex-start;
+
+    color: $title-color;
+
+    background: none;
+  }
+
+  .diet-programm__title {
+    @include big-title;
+
+    padding: 0 90px;
+
+    text-align: left;
+    color: $title-color;
+  }
+
+  .diet-programm__sub-title {
+    padding-left: 90px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .diet-programm__image-small {
+    display: none;
+  }
+
+  .diet-programm__image-middle {
+    display: block;
+  }
+
+  .diet-programm__select {
+    position: absolute;
+
+    width: 205px;
+    padding: 18px;
+    left: 120px;
+    bottom: 530px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .diet-programm {
+    flex-wrap: wrap;
+
+    background: url("../img/index-background-desktop@1x.jpg") no-repeat right top, linear-gradient(90deg, $primary-color 50%, transparent 50%);
+  }
+
+  .diet-programm__title {
+    width: 420px;
+    padding: 0;
+    margin: 70px 0 45px;
+  }
+
+  .diet-programm__sub-title {
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  .diet-programm__image-middle {
+    display: none;
+  }
+
+  .diet-programm__image-big {
+    position: absolute;
+    top: 135px;
+    right: 328px;
+
+    display: block;
+  }
+
+  .diet-programm__select {
+    position: initial;
+  }
 }

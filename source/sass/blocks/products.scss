@@ -11,9 +11,22 @@
   border-bottom: 1px solid $border-goods-color;
 }
 
+.products__wrapper {
+  display: flex;
+}
+
+.products__image-middle {
+  display: none;
+}
+
+.products__image-big {
+  display: none;
+}
+
 .products__description {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .products__title {
@@ -35,18 +48,129 @@
 }
 
 .products__field {
-  width: 3000px;
-
   text-align: right;
 }
 
-.btn--products {
+.products__btn {
   width: auto;
   margin-bottom: 25px;
 }
 
-.products__more {
+.products__item--more-goods {
   padding-bottom: 25px;
+}
 
-  border-bottom: 1px solid $border-goods-color;
+@media (min-width: $tablet-width) {
+  .products__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: none;
+  }
+
+  .products__item {
+    width: 324px;
+    margin-bottom: 140px;
+    padding: 0 0 40px 0;
+
+    background-color: $bg-block-color;
+    border-bottom: none;
+  }
+
+  .products__wrapper {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .products__image-mini {
+    display: none;
+  }
+
+  .products__image-middle {
+    display: block;
+
+    &--small {
+      margin-top: -50px;
+      margin-bottom: 40px;
+    }
+
+    &--big {
+      margin-top: -80px;
+      margin-bottom: 34px;
+    }
+  }
+
+  .products__image-big {
+    display: none;
+  }
+
+  .products__description {
+    padding: 0 40px;
+  }
+
+  .products__title {
+    align-self: center;
+    width: 130px;
+    // margin: 0 0 10px 0;
+    padding-top: 0;
+
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .products__properties-list {
+    font-size: 16px;
+
+    border-spacing: 0;
+  }
+
+  .products__value {
+    @include border-bottom;
+
+    padding: 8px 0;
+  }
+
+  .products__field {
+    @include border-bottom;
+
+    padding: 8px 0;
+  }
+
+  .products__btn {
+    margin: 0 40px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .products__item--more-goods {
+    padding: 54px 39px 39px;
+
+    background-color: transparent;
+    border: 1px solid $border-menu-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products__item {
+    width: 245px;
+  }
+
+  .products__image-middle {
+    display: none;
+  }
+
+  .products__image-big {
+    display: block;
+
+    &--small {
+      margin-top: -50px;
+      margin-bottom: 40px;
+    }
+
+    &--big {
+      margin-top: -80px;
+      margin-bottom: 34px;
+    }
+  }
 }

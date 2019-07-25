@@ -5,7 +5,10 @@
 .advantages__item {
   position: relative;
 
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
+  min-height: 60px;
 
   &::before {
     position: absolute;
@@ -54,6 +57,7 @@
   }
 
   .advantages__item {
+    display: block;
     width: 245px;
     margin-bottom: 90px;
 

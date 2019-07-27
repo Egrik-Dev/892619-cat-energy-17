@@ -13,10 +13,71 @@
   margin-bottom: 42px;
 }
 
-.page-main--catalog {
-  padding-bottom: 35px;
-}
-
 .page-main--catalog__title {
   padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__diet-programm {
+    margin-bottom: 0;
+    padding: 30px 30px 0;
+  }
+
+  .page-main__services {
+    padding: 0 30px;
+  }
+
+  .page-main__advantages {
+    padding: 0 30px;
+  }
+
+  .page-main--catalog__title {
+    padding: 0 30px;
+    margin-bottom: 170px;
+
+    @include big-title;
+  }
+
+  .page-main__products {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__diet-programm {
+    z-index: 0;
+
+    width: 1130px;
+    margin: -110px auto 80px;
+    padding: 140px 190px 190px 120px;
+  }
+
+  .page-main__services {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .page-main__advantages {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .page-main--catalog {
+    padding-top: 50px;
+  }
+
+  .page-main--catalog__title {
+    width: 1220px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 40px;
+  }
+
+  .page-main__products {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 }

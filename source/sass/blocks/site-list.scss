@@ -9,11 +9,55 @@
   border-top: 1px solid $border-menu-color;
 }
 
-.site-list__item a {
+.site-list__item {
   display: block;
   padding: 22px 20px;
 
-  color: #111111;
+  color: $title-color;
 
   border-bottom: 1px solid $border-menu-color;
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+    width: 440px;
+    border-top: none;
+
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .site-list__item {
+    padding: 18px 0 10px;
+    border-bottom: none;
+  }
+
+  .site-list__item--active {
+    border-bottom: 2px solid $content-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    width: 480px;
+    font-size: 20px;
+  }
+
+  .site-list__item {
+    color: $primary-color;
+  }
+
+  .site-list__item--active {
+    border-bottom-color: $primary-color;
+  }
+
+  .site-list__item--inner {
+    color: $title-color;
+  }
+
+  .site-list__item--inner.site-list__item--active {
+    border-bottom: 2px solid $content-color;
+  }
 }

@@ -10,3 +10,9 @@
   font-size: 16px;
   line-height: 16px;
 }
+
+@media (min-width: $tablet-width) {
+  .site-developer {
+    width: 170px;
+  }
+}

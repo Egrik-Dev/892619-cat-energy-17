@@ -66,7 +66,11 @@
 
 @media (min-width: $desktop-width) {
   .social__link-icon {
-    &:hover path, &:hover circle {
+    &:hover path {
+      fill: #68b738;
+    }
+
+    &:hover circle {
       fill: #68b738;
     }
 

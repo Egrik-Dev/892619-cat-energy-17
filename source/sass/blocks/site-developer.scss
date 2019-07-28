@@ -4,7 +4,16 @@
   align-items: center;
 }
 
+// .site-developer__list {
+//   @include reset-list;
+
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
 .site-developer__text {
+  color: $text-color;
   font-family: $second-font;
   font-weight: 400;
   font-size: 16px;
@@ -14,5 +23,27 @@
 @media (min-width: $tablet-width) {
   .site-developer {
     width: 170px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-developer__logo-icon {
+    &:hover {
+      path {
+        fill: #68b738;
+      }
+    }
+
+    &:active {
+      path {
+        fill: #68b738;
+      }
+
+      opacity: 0.3;
+    }
+  }
+
+  .site-developer__text:active {
+    opacity: 0.3;
   }
 }

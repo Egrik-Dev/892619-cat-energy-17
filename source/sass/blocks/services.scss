@@ -6,14 +6,14 @@
   position: relative;
 
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 30px 20px 20px;
 
   background-color: $bg-block-color;
 
   &::before {
     position: absolute;
-    left: 20px;
-    top: 22px;
+    left: 22px;
+    top: 25px;
 
     width: 50px;
     height: 50px;
@@ -23,6 +23,10 @@
     background: $content-color no-repeat 0 0;
     border-radius: 50%;
   }
+}
+
+.services__item:nth-last-child(1) {
+  margin-bottom: 0;
 }
 
 .services__item--loss::after {
@@ -52,20 +56,18 @@
 }
 
 .services__title {
-  margin: 0 0 20px 0;
-  padding-left: 50px;
+  margin: 0 0 30px 0;
+  padding-left: 71px;
 
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .services__description {
-  margin: 0 0 20px 0;
+  margin: 0 0 40px 0;
 
-  padding-bottom: 20px;
   font-family: $second-font;
 
   @include border-bottom;
@@ -81,8 +83,8 @@
 
   &::after {
     position: absolute;
-    right: -40px;
-    top: 7px;
+    right: -35px;
+    top: 8px;
 
     width: 24px;
     height: 11px;
@@ -96,7 +98,7 @@
 @media (min-width: $tablet-width) {
   .services__item {
     margin-bottom: 30px;
-    padding: 50px 280px 50px 50px;
+    padding: 76px 280px 60px 53px;
 
     &::before {
       display: none;
@@ -108,7 +110,7 @@
   }
 
   .services__item--gain {
-    padding-right: 318px;
+    padding-right: 313px;
   }
 
   .services__title {
@@ -121,8 +123,8 @@
 
     &::before {
       position: absolute;
-      right: 60px;
-      top: 70px;
+      right: 62px;
+      top: 92px;
 
       width: 200px;
       height: 200px;
@@ -136,8 +138,8 @@
 
   .services__item--loss .services__title::after {
     position: absolute;
-    right: 90px;
-    top: 56px;
+    right: 92px;
+    top: 80px;
 
     width: 140px;
     height: 194px;
@@ -150,7 +152,7 @@
   .services__item--gain .services__title::after {
     position: absolute;
     right: 28px;
-    top: 115px;
+    top: 136px;
 
     width: 268px;
     height: 112px;
@@ -161,8 +163,7 @@
   }
 
   .services__description {
-    margin: 0 0 50px 0;
-    padding-bottom: 0;
+    margin: 0 0 55px 0;
 
     font-size: 16px;
     line-height: 24px;
@@ -191,6 +192,7 @@
   .services__item {
     width: 470px;
     padding: 50px;
+    margin-bottom: 0;
 
     &::before {
       display: block;
@@ -239,5 +241,19 @@
 
   .services__description {
     margin-bottom: 40px;
+  }
+
+  .services__link {
+    &:hover::after {
+      right: -54px;
+
+      width: 33px;
+
+      background: url("../img/icon-right-arrow-verylong.svg") no-repeat 0 0;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

@@ -9,14 +9,16 @@
 }
 
 .diet-programm__title {
+  margin-bottom: 24px;
+
   text-align: center;
   line-height: 36px;
   color: $primary-color;
 }
 
 .diet-programm__sub-title {
-  padding: 0 35px 25px;
-  margin: 0;
+  padding: 0 35px;
+  margin: 0 0 28px 0;
 
   font-size: 14px;
   line-height: 14px;
@@ -24,7 +26,7 @@
 }
 
 .diet-programm__image-small {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .diet-programm__image-middle {
@@ -54,6 +56,7 @@
     @include big-title;
 
     padding: 0 90px;
+    margin-bottom: 41px;
 
     text-align: left;
     color: $title-color;
@@ -61,6 +64,7 @@
 
   .diet-programm__sub-title {
     padding-left: 90px;
+    margin-bottom: 20px;
 
     font-size: 20px;
     line-height: 20px;
@@ -89,19 +93,34 @@
 
 @media (min-width: $desktop-width) {
   .diet-programm {
+    position: relative;
     flex-wrap: wrap;
 
-    background: url("../img/index-background-desktop@1x.jpg") no-repeat right top, linear-gradient(90deg, $primary-color 50%, transparent 50%);
+    &::after {
+      position: absolute;
+      z-index: -1;
+
+      right: -70px;
+      top: 0;
+
+      width: 720px;
+      height: 696px;
+
+      content: "";
+
+      background: url("../img/index-background-desktop@1x.jpg") no-repeat 0 0;
+
+    }
   }
 
   .diet-programm__title {
     width: 420px;
-    padding: 0;
+    padding: 0 0 0 80px;
     margin: 70px 0 45px;
   }
 
   .diet-programm__sub-title {
-    padding: 0;
+    padding: 0 0 0 80px;
     margin-bottom: 50px;
   }
 
@@ -111,13 +130,15 @@
 
   .diet-programm__image-big {
     position: absolute;
-    top: 135px;
-    right: 328px;
+    top: 142px;
+    right: 258px;
 
     display: block;
   }
 
   .diet-programm__select {
     position: initial;
+
+    margin-left: 80px;
   }
 }

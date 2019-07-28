@@ -17,25 +17,19 @@
 .social__link {
   display: block;
 
-  &--vk {
+  &-icon--vk {
     width: 22px;
     height: 12px;
-
-    background: url("../img/icon-vk.svg") no-repeat 0 0;
   }
 
-  &--instagram {
+  &-icon--instagram {
     width: 16px;
     height: 16px;
-
-    background: url("../img/icon-insta.svg") no-repeat 0 0;
   }
 
-  &--fb {
+  &-icon--fb {
     width: 10px;
     height: 19px;
-
-    background: url("../img/icon-fb.svg") no-repeat 0 0;
   }
 }
 
@@ -50,7 +44,9 @@
 
   .social__link {
     display: block;
+  }
 
+  .social__link-icon {
     &--vk {
       width: 30px;
       height: 16px;
@@ -64,6 +60,18 @@
     &--fb {
       width: 14px;
       height: 28px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social__link-icon {
+    &:hover path, &:hover circle {
+      fill: #68b738;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

@@ -36,13 +36,15 @@
   align-self: stretch;
 
   color: $text-color;
+  font-size: 16px;
+  line-height: 20px;
 
   background-color: $bg-block-color;
 }
 
 @media (min-width: $tablet-width) {
   .more-goods {
-    width: 224px;
+    width: 226px;
   }
 
   .more-goods__image-mini {
@@ -80,5 +82,19 @@
 @media (min-width: $desktop-width) {
   .more-goods {
     width: 167px;
+  }
+
+  .more-goods__btn {
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .more-goods__image-middle {
+    margin-bottom: 50px;
   }
 }

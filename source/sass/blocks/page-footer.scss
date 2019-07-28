@@ -59,4 +59,14 @@
     margin: 0 auto;
     padding: 58px 40px;
   }
+
+  .page-footer__logo-link {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }

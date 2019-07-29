@@ -6,13 +6,14 @@
 .products__item {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0 20px 24px;
 
   border-bottom: 1px solid $border-goods-color;
 }
 
 .products__wrapper {
   display: flex;
+  align-items: center;
 }
 
 .products__image-middle {
@@ -27,12 +28,12 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 10px 0;
 }
 
 .products__title {
   width: 75px;
   margin: 0 0 10px 0;
-  padding-top: 20px;
 
   color: $title-color;
   font-size: 16px;
@@ -47,6 +48,8 @@
   font-family: $second-font;
   font-size: 12px;
   line-height: 16px;
+
+  border-spacing: 0;
 }
 
 .products__field {
@@ -55,11 +58,14 @@
 
 .products__btn {
   width: auto;
-  margin-bottom: 25px;
+  padding: 10px 0;
+
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .products__item--more-goods {
-  padding-bottom: 25px;
+  padding: 25px 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -72,7 +78,7 @@
 
   .products__item {
     width: 324px;
-    margin-bottom: 140px;
+    margin-bottom: 138px;
     padding: 0 0 40px 0;
 
     background-color: $bg-block-color;
@@ -81,6 +87,7 @@
 
   .products__wrapper {
     flex-direction: column;
+    align-items: stretch;
     margin-bottom: 30px;
   }
 
@@ -92,13 +99,13 @@
     display: block;
 
     &--small {
-      margin-top: -50px;
-      margin-bottom: 40px;
+      margin-top: -46px;
+      margin-bottom: 37px;
     }
 
     &--big {
-      margin-top: -80px;
-      margin-bottom: 34px;
+      margin-top: -82px;
+      margin-bottom: 38px;
     }
   }
 
@@ -113,8 +120,8 @@
   .products__title {
     align-self: center;
     width: 130px;
-    // margin: 0 0 10px 0;
     padding-top: 0;
+    margin-bottom: 19px;
 
     text-align: center;
     font-size: 20px;
@@ -146,7 +153,7 @@
   }
 
   .products__item--more-goods {
-    padding: 54px 39px 39px;
+    padding: 54px 38px 39px;
 
     background-color: transparent;
     border: 1px solid $border-menu-color;
@@ -156,6 +163,11 @@
 @media (min-width: $desktop-width) {
   .products__item {
     width: 245px;
+    margin-bottom: 142px;
+  }
+
+  .products__item--more-goods {
+    padding: 55px 38px 39px;
   }
 
   .products__image-middle {

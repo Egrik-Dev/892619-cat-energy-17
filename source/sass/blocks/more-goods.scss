@@ -5,7 +5,7 @@
 }
 
 .more-goods__image-mini {
-  padding: 26px 0;
+  margin-bottom: 24px;
 
   opacity: 0.2;
 }
@@ -15,6 +15,8 @@
 }
 
 .more-goods__text {
+  margin-bottom: 8px;
+
   color: $title-color;
   font-size: 16px;
   line-height: 20px;
@@ -23,8 +25,7 @@
 }
 
 .more-goods__description {
-  margin: 0;
-  padding: 10px 0 20px;
+  margin: 0 0 20px 0;
 
   font-family: $second-font;
   font-size: 12px;
@@ -36,13 +37,15 @@
   align-self: stretch;
 
   color: $text-color;
+  font-size: 16px;
+  line-height: 20px;
 
   background-color: $bg-block-color;
 }
 
 @media (min-width: $tablet-width) {
   .more-goods {
-    width: 224px;
+    width: 246px;
   }
 
   .more-goods__image-mini {
@@ -51,21 +54,22 @@
 
   .more-goods__image-middle {
     display: block;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 
     opacity: 0.2;
   }
 
   .more-goods__text {
     width: 135px;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
 
     font-size: 20px;
     text-align: center;
   }
 
   .more-goods__description {
-    margin-bottom: 60px;
+    margin-bottom: 87px;
+    padding: 0 10px;
 
     font-size: 16px;
     text-align: center;
@@ -80,5 +84,23 @@
 @media (min-width: $desktop-width) {
   .more-goods {
     width: 167px;
+  }
+
+  .more-goods__description {
+    padding: 0;
+  }
+
+  .more-goods__btn {
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .more-goods__image-middle {
+    margin-bottom: 50px;
   }
 }

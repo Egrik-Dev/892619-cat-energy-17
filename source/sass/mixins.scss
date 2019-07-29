@@ -12,3 +12,8 @@
   font-size: 60px;
   line-height: 60px;
 }
+
+@mixin desktop-wrapper {
+  width: 1220px;
+  padding: 0 40px;
+}

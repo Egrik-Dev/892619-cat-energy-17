@@ -1,5 +1,5 @@
 .page-main__diet-programm {
-  padding: 24px 20px;
+  padding: 27px 20px 21px;
 }
 
 .page-main__services {
@@ -13,18 +13,19 @@
 }
 
 .page-main--catalog {
-  padding-top: 43px;
+  padding-top: 15px;
+  border-top: 1px solid $border-goods-color;
 }
 
 .page-main--catalog__title {
   padding: 0 20px;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 @media (min-width: $tablet-width) {
   .page-main__diet-programm {
     margin-bottom: 0;
-    padding: 43px 27px 0;
+    padding: 18px 27px 0;
   }
 
   .page-main__services {
@@ -35,6 +36,12 @@
   .page-main__advantages {
     padding: 0 30px;
   }
+
+  .page-main--catalog {
+    padding-top: 18px;
+    border-top: none;
+  }
+
 
   .page-main--catalog__title {
     padding: 0 30px;
@@ -53,36 +60,32 @@
     z-index: 0;
 
     width: 1220px;
-    margin: -115px auto 69px;
+    margin: -130px auto 69px;
     padding: 150px 40px 196px;
   }
 
   .page-main__services {
-    width: 1220px;
-    margin: 0 auto 79px;
-    padding: 0 40px;
+    @include desktop-wrapper;
+    margin: 0 auto 83px;
   }
 
   .page-main__advantages {
-    width: 1220px;
+    @include desktop-wrapper;
     margin: 0 auto;
-    padding: 0 40px;
   }
 
   .page-main--catalog {
-    padding-top: 73px;
+    padding-top: 58px;
   }
 
   .page-main--catalog__title {
-    width: 1220px;
+    @include desktop-wrapper;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 40px;
   }
 
   .page-main__products {
-    width: 1220px;
+    @include desktop-wrapper;
     margin: 0 auto;
-    padding: 0 40px;
   }
 }

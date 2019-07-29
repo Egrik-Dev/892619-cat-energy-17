@@ -5,8 +5,6 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-
-  border-top: 1px solid $border-menu-color;
 }
 
 .site-list__item {
@@ -16,6 +14,10 @@
   color: $title-color;
 
   border-bottom: 1px solid $border-menu-color;
+}
+
+li:nth-child(1) .site-list__item {
+  border-top: 1px solid $border-menu-color;
 }
 
 @media (min-width: $tablet-width) {
@@ -36,6 +38,10 @@
 
   .site-list__item--active {
     border-bottom: 2px solid $content-color;
+  }
+
+  li:nth-child(1) .site-list__item {
+    border-top: none;
   }
 }
 

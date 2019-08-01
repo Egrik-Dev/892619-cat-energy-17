@@ -96,31 +96,32 @@
 
 @media (min-width: $desktop-width) {
   .diet-programm::after {
-      position: absolute;
-      z-index: -1;
+    position: absolute;
+    z-index: -1;
 
-      right: 0;
-      top: -130px;
+    right: 0;
+    top: -130px;
 
-      width: 50%;
-      height: 696px;
+    width: 50%;
+    height: 696px;
 
-      content: "";
+    content: "";
 
-      background: url("../img/index-background-desktop@1x.jpg") no-repeat top right;
+    background: url("../img/index-background-desktop@1x.jpg") no-repeat top right;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/index-background-desktop@2x.jpg") no-repeat top right;
       background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background: url("../img/index-background-desktop@2x.jpg") no-repeat top right;
-        background-size: cover;
     }
   }
 
   .diet-programm__wrapper {
+    @include desktop-wrapper;
+
     position: relative;
 
     flex-wrap: wrap;
-    @include desktop-wrapper;
     margin: 0 auto;
   }
 

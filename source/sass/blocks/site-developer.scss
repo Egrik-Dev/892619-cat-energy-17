@@ -4,14 +4,6 @@
   align-items: center;
 }
 
-// .site-developer__list {
-//   @include reset-list;
-
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
 .site-developer__text {
   color: $text-color;
   font-family: $second-font;
@@ -19,6 +11,11 @@
   font-size: 16px;
   line-height: 16px;
 }
+
+.site-developer__logo-icon {
+  fill: $icon-color;
+}
+
 
 @media (min-width: $tablet-width) {
   .site-developer {
@@ -29,16 +26,11 @@
 @media (min-width: $desktop-width) {
   .site-developer__logo-icon {
     &:hover {
-      path {
-        fill: #68b738;
-      }
+      fill: #68b738;
     }
 
     &:active {
-      path {
-        fill: #68b738;
-      }
-
+      fill: #68b738;
       opacity: 0.3;
     }
   }

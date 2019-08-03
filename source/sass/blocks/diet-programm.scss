@@ -31,6 +31,7 @@
 
 .diet-programm__title {
   margin-bottom: 25px;
+  width: 90%;
 
   text-align: center;
   line-height: 36px;
@@ -68,6 +69,7 @@
 
     padding: 0 90px;
     margin-bottom: 41px;
+    width: 80%;
 
     text-align: left;
     color: $title-color;
@@ -145,7 +147,7 @@
   }
 
   .diet-programm__select {
-    position: initial;
+    position: static;
 
     margin-left: 80px;
   }

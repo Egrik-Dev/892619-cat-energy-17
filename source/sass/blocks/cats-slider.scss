@@ -1,0 +1,208 @@
+.cats-slider {
+  display: flex;
+  justify-content: center;
+}
+
+.cats-slider__toggles {
+  position: relative;
+
+  display: flex;
+  width: 198px;
+  justify-content: space-between;
+  padding: 276px 0 0 4px;
+
+  color: $title-color;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.cats-slider__input-before:checked ~ .cats-slider__toggles::before {
+  position: absolute;
+  left: -56px;
+  top: 7px;
+
+  content: "";
+
+  width: 311px;
+  height: 232px;
+
+  background: url("../img/before-mobile@1x.png") no-repeat center top;
+  background-size: contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/before-mobile@2x.png") no-repeat center top;
+    background-size: contain;
+  }
+}
+
+.cats-slider__input-after:checked ~ .cats-slider__toggles::after {
+  position: absolute;
+  left: -56px;
+  top: 7px;
+
+  content: "";
+
+  width: 311px;
+  height: 232px;
+
+  background: url("../img/after-mobile@1x.png") no-repeat center top;
+  background-size: contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/after-mobile@2x.png") no-repeat center top;
+    background-size: contain;
+  }
+}
+
+.cats-slider__toggles-scale {
+  width: 84px;
+  height: 12px;
+  margin-top: 2px;
+
+  border: 1px solid $border-metrics-color;
+  border-radius: 8px;
+
+  background-color: $primary-color;
+}
+
+.cats-slider__indicator {
+  width: 35px;
+  height: 6px;
+  margin: 3px 0 0 7px;
+
+  border-radius: 8px;
+
+  background-color: $content-color;
+}
+
+@media (min-width: $tablet-width) {
+  .cats-slider {
+    background-image: linear-gradient(90deg, $bg-block-color 50%, $bg-slider 50%);
+  }
+
+  .cats-slider__toggles {
+    padding: 367px 0 0 4px;
+    width: 571px;
+
+    font-size: 20px;
+  }
+
+  .cats-slider__input-before:checked ~ .cats-slider__toggles::before {
+    left: -54px;
+    top: -153px;
+
+    width: 677px;
+    height: 499px;
+
+    background: url("../img/before-tablet@1x.png") no-repeat center top;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/before-tablet@2x.png") no-repeat center top;
+      background-size: contain;
+    }
+  }
+
+  .cats-slider__input-after:checked ~ .cats-slider__toggles::after {
+    left: -54px;
+    top: -153px;
+
+    width: 677px;
+    height: 499px;
+
+    background: url("../img/after-tablet@1x.png") no-repeat center top;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/after-tablet@2x.png") no-repeat center top;
+      background-size: contain;
+    }
+  }
+
+  .cats-slider__toggles-scale {
+    position: relative;
+
+    width: 431px;
+    height: 8px;
+    margin-top: 7px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: $border-metrics-color;
+  }
+
+  .cats-slider__indicator {
+    position: absolute;
+    left: 199px;
+    top: -13px;
+
+    width: 32px;
+    height: 32px;
+    margin: 0;
+
+    border: 1px solid $border-indicator;
+    border-radius: 50%;
+
+    background-color: $primary-color;
+
+    &::before {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+
+      content: "";
+
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background-color: $content-color;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cats-slider {
+    width: 50%;
+
+    background-image: linear-gradient(90deg, $bg-block-color 325px, $bg-slider 325px);
+  }
+
+  .cats-slider__toggles {
+    padding: 367px 0 0 39px;
+  }
+
+  .cats-slider__toggles-before,
+  .cats-slider__toggles-after {
+    cursor: pointer;
+  }
+
+  .cats-slider__input-before:checked ~ .cats-slider__toggles::before {
+    left: -44px;
+    top: -175px;
+
+    background: url("../img/before-desktop@1x.png") no-repeat center top;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/before-desktop@2x.png") no-repeat center top;
+      background-size: contain;
+    }
+  }
+
+  .cats-slider__input-after:checked ~ .cats-slider__toggles::after {
+    left: -44px;
+    top: -175px;
+
+    background: url("../img/after-desktop@1x.png") no-repeat center top;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/after-desktop@2x.png") no-repeat center top;
+      background-size: contain;
+    }
+  }
+}

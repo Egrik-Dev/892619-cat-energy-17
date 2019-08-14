@@ -65,22 +65,9 @@
         </div>
       </div>
     </footer>
-    <script>
-      var navToggle = document.querySelector('.main-nav__toggle');
-      var mainNav = document.querySelector('.main-nav');
-
-      mainNav.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (mainNav.classList.contains('main-nav--closed')) {
-          mainNav.classList.remove('main-nav--closed');
-          mainNav.classList.add('main-nav--opened');
-        } else {
-          mainNav.classList.add('main-nav--closed');
-          mainNav.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/menu.js"></script>
+    <script src="js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDNpvLNY6zVHguc-YFQtd8uNQxt6xZryY&callback=initMap" async defer></script>
     <script src="js/picturefill.js"></script>
     <script src="js/svgxuse.js" defer></script>
   </body>

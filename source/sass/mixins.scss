@@ -13,6 +13,10 @@
   line-height: 60px;
 }
 
+@mixin mobile-wrapper {
+  padding: 0 20px;
+}
+
 @mixin tablet-wrapper {
   padding: 0 30px;
 }

@@ -13,16 +13,13 @@
 
   color: $title-color;
 
-  border-bottom: 1px solid $border-menu-color;
-}
-
-li:nth-child(1) .site-list__item {
   border-top: 1px solid $border-menu-color;
 }
 
 @media (min-width: $tablet-width) {
   .site-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 440px;
     border-top: none;
@@ -33,7 +30,7 @@ li:nth-child(1) .site-list__item {
 
   .site-list__item {
     padding: 18px 0 6px;
-    border-bottom: none;
+    border-top: none;
   }
 
   .site-list__item--active {

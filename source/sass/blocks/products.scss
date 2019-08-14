@@ -19,11 +19,13 @@
 .products__image {
   &-small {
     width: 140px;
+    max-width: none;
     height: 144px;
   }
 
   &-big {
     width: 140px;
+    max-width: none;
     height: 144px;
   }
 }
@@ -33,6 +35,10 @@
   flex-direction: column;
   flex-grow: 1;
   padding: 10px 0;
+}
+
+.products-link--title {
+  color: $title-color;
 }
 
 .products__title {
@@ -62,7 +68,7 @@
 
 .products__btn {
   width: auto;
-  padding: 10px 0;
+  padding: 10px;
 
   font-size: 16px;
   line-height: 20px;
@@ -172,8 +178,8 @@
     &-small {
       width: 245px;
       height: 172px;
-      margin-top: -50px;
-      margin-bottom: 40px;
+      margin-top: -44px;
+      margin-bottom: 33px;
     }
 
     &-big {

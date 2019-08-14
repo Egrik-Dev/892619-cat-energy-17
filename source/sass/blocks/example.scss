@@ -82,7 +82,7 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    background-image: linear-gradient($primary-color 178px, transparent 178px), linear-gradient(90deg, $bg-block-color 50%, $bg-slider 50%);
+    background-image: linear-gradient($primary-color 178px, transparent 178px), linear-gradient(90deg, $bg-block-color 51%, $bg-slider 51%);
   }
 
   .example__left-side {
@@ -123,14 +123,17 @@
   }
 
   .example__wrapper {
-    @include desktop-wrapper;
+    width: 1220px;
+    padding: 0 40px 70px;
     margin: 0 auto;
-
     display: flex;
     justify-content: space-between;
+
+    background-image: linear-gradient($primary-color 135px,transparent 135px),linear-gradient(90deg, $bg-block-color 975px, $bg-slider 975px);
   }
 
   .example__slider {
+    padding: 0;
     margin-top: 135px;
   }
 }

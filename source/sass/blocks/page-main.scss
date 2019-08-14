@@ -4,29 +4,36 @@
 }
 
 .page-main__services {
-  padding: 0 20px;
+  @include mobile-wrapper;
+
   margin-bottom: 18px;
 }
 
 .page-main__advantages {
-  padding: 0 20px;
+  @include mobile-wrapper;
+
   margin-bottom: 22px;
 }
 
 .page-main--catalog {
   padding-top: 15px;
-  border-top: 1px solid $border-goods-color;
 }
 
 .page-main--catalog__title {
-  padding: 0 20px;
+  @include mobile-wrapper;
+
   margin-bottom: 27px;
 }
 
 .page-main__example {
-  padding: 17px 20px;
+  padding: 17px 20px 35px;
 
   background-color: $bg-block-color;
+}
+
+.page-main__map {
+  width: 100%;
+  height: 360px;
 }
 
 @media (min-width: $tablet-width) {
@@ -69,6 +76,10 @@
     border-top: 1px solid $border-menu-color;
     background-color: $primary-color;
   }
+
+  .page-main__map {
+    height: 388px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -103,9 +114,11 @@
   }
 
   .page-main__example {
-    // padding: 43px 0 0 0;
-
     border-top: none;
     background-color: $primary-color;
+  }
+
+  .page-main__map {
+    height: 400px;
   }
 }

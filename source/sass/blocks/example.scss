@@ -1,0 +1,143 @@
+.example__title {
+  margin-bottom: 23px;
+}
+
+.example__description {
+  margin: 0 1px 25px 0;
+
+  font-family: $second-font;
+}
+
+.example__advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.example__metrics {
+  margin: 0 0 34px 0;
+}
+
+.example__privilege {
+  flex-grow: 1;
+  width: 700px;
+
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__expenses,
+.example__price {
+  font-weight: 400;
+}
+
+.example__slider {
+  padding-top: 6px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__title {
+    margin-bottom: 64px;
+
+    @include tablet-wrapper;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__description {
+    margin: 0 6px 53px 0;
+
+    @include tablet-wrapper;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $second-font;
+  }
+
+  .example__advantages {
+    flex-wrap: nowrap;
+
+    @include tablet-wrapper;
+    margin-bottom: 221px;
+  }
+
+  .example__metrics {
+    margin: 0 42px 34px 0;
+  }
+
+  .example__privilege {
+    flex-grow: 0;
+    width: 175px;
+    margin-left: auto;
+    padding-top: 8px;
+
+    text-align: right;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .example__slider {
+    padding-bottom: 72px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    background-image: linear-gradient($primary-color 178px, transparent 178px), linear-gradient(90deg, $bg-block-color 51%, $bg-slider 51%);
+  }
+
+  .example__left-side {
+    width: 50%;
+  }
+
+  .example__title {
+    margin-bottom: 146px;
+    padding: 0;
+  }
+
+  .example__description {
+    margin-bottom: 68px;
+    width: 432px;
+    padding: 0;
+  }
+
+  .example__advantages {
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 0;
+    width: 366px;
+  }
+
+  .example__metrics {
+    margin: 0 0 56px 0;
+  }
+
+  .example__privilege {
+    flex-grow: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 327px;
+    margin-left: 0;
+    padding-top: 0;
+
+    text-align: left;
+  }
+
+  .example__wrapper {
+    width: 1220px;
+    padding: 0 40px 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    background-image: linear-gradient($primary-color 135px, transparent 135px), linear-gradient(90deg, $bg-block-color 975px, $bg-slider 975px);
+  }
+
+  .example__slider {
+    padding: 0;
+    margin-top: 135px;
+  }
+}

@@ -4,23 +4,36 @@
 }
 
 .page-main__services {
-  padding: 0 20px;
+  @include mobile-wrapper;
+
   margin-bottom: 18px;
 }
 
 .page-main__advantages {
-  padding: 0 20px;
-  margin-bottom: 42px;
+  @include mobile-wrapper;
+
+  margin-bottom: 22px;
 }
 
 .page-main--catalog {
   padding-top: 15px;
-  border-top: 1px solid $border-goods-color;
 }
 
 .page-main--catalog__title {
-  padding: 0 20px;
+  @include mobile-wrapper;
+
   margin-bottom: 27px;
+}
+
+.page-main__example {
+  padding: 17px 20px 35px;
+
+  background-color: $bg-block-color;
+}
+
+.page-main__map {
+  width: 100%;
+  height: 360px;
 }
 
 @media (min-width: $tablet-width) {
@@ -29,12 +42,14 @@
   }
 
   .page-main__services {
-    padding: 0 30px;
+    @include tablet-wrapper;
+
     margin-bottom: 47px;
   }
 
   .page-main__advantages {
-    padding: 0 30px;
+    @include tablet-wrapper;
+    margin-bottom: 12px;
   }
 
   .page-main--catalog {
@@ -44,14 +59,26 @@
 
 
   .page-main--catalog__title {
-    padding: 0 30px;
+    @include tablet-wrapper;
+
     margin-bottom: 165px;
 
     @include big-title;
   }
 
   .page-main__products {
-    padding: 0 30px;
+    @include tablet-wrapper;
+  }
+
+  .page-main__example {
+    padding: 43px 0 0 0;
+
+    border-top: 1px solid $border-menu-color;
+    background-color: $primary-color;
+  }
+
+  .page-main__map {
+    height: 388px;
   }
 }
 
@@ -68,7 +95,7 @@
 
   .page-main__advantages {
     @include desktop-wrapper;
-    margin: 0 auto;
+    margin: 0 auto 86px;
   }
 
   .page-main--catalog {
@@ -84,5 +111,14 @@
   .page-main__products {
     @include desktop-wrapper;
     margin: 0 auto;
+  }
+
+  .page-main__example {
+    border-top: none;
+    background-color: $primary-color;
+  }
+
+  .page-main__map {
+    height: 400px;
   }
 }

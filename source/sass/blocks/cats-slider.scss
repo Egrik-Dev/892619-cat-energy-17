@@ -90,7 +90,7 @@
     position: relative;
 
     width: 431px;
-    height: 0px;
+    height: 0;
     margin-top: 7px;
 
     border: none;
@@ -112,7 +112,7 @@
     border: 1px solid $border-indicator;
     border-radius: 50%;
 
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     background-color: $primary-color;
 
     &::before {
@@ -176,13 +176,13 @@
   .cats-slider__toggles-scale .cats-slider__toggles-indicator {
     &:hover {
       cursor: pointer;
-      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
     &:active {
       margin: 0 0 -1px -1px;
       border: 2px solid $content-color;
-      box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
     }
   }
 }

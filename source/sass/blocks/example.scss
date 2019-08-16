@@ -33,6 +33,10 @@
   font-weight: 400;
 }
 
+.example__slider {
+  padding-top: 6px;
+}
+
 @media (min-width: $tablet-width) {
   .example__title {
     margin-bottom: 64px;

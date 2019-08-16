@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="/fonts/oswaldmedium.woff" as="font">
-    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
-    <link rel="preload" href="/fonts/oswaldregular.woff" as="font">
-    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
   </head>
   <body>
     <header class="page-header">
@@ -99,10 +95,27 @@
             </div>
           </div>
           <div class="example__slider cats-slider">
+            <input class="visually-hidden cats-slider__input-after" id="cat-after" type="radio" name="toggle">
+            <input class="visually-hidden cats-slider__input-before" id="cat-before" type="radio" name="toggle" checked>
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+              <img class="cats-slider__image cats-slider__image--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Толстый кот до применения Cat Energy">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+              <img class="cats-slider__image cats-slider__image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Очень худой кот после применения Cat Energy">
+            </picture>
             <div class="cats-slider__toggles">
-              <input class="visually-hidden cats-slider__input-before" id="cat-before" type="radio" name="toggle" checked>
-              <input class="visually-hidden cats-slider__input-after" id="cat-after" type="radio" name="toggle">
-              .
               <label class="cats-slider__toggles-before" for="cat-before">было</label>
               <div class="cats-slider__toggles-scale">
                 <div class="cats-slider__toggles-indicator"></div>

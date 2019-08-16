@@ -1,15 +1,28 @@
 .cats-slider {
-  position: relative;
-
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cats-slider__image {
+  width: 311px;
+  height: 232px;
+  margin-bottom: 35px;
+}
+
+.cats-slider__input-after:checked ~ picture .cats-slider__image--before {
+  display: none;
+}
+
+.cats-slider__input-before:checked ~ picture .cats-slider__image--after {
+  display: none;
 }
 
 .cats-slider__toggles {
   display: flex;
   width: 198px;
   justify-content: space-between;
-  padding: 276px 0 0 4px;
+  padding: 0 0 0 4px;
 
   color: $title-color;
   font-size: 16px;
@@ -17,142 +30,80 @@
   text-transform: uppercase;
 }
 
-.cats-slider__toggles-before,
-.cats-slider__toggles-after {
-  position: relative;
-}
-
-.cats-slider__input-before:checked ~ .cats-slider__toggles-before::before {
-  position: absolute;
-  left: -62px;
-  top: -266px;
-
-  content: "";
-
-  width: 311px;
-  height: 232px;
-
-  background: url("../img/before-mobile@1x.png") no-repeat center top;
-  background-size: contain;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../img/before-mobile@2x.png") no-repeat center top;
-    background-size: contain;
-  }
-}
-
-.cats-slider__input-after:checked ~ .cats-slider__toggles-after::before {
-  position: absolute;
-  left: -225px;
-  top: -266px;
-
-  content: "";
-
-  width: 311px;
-  height: 232px;
-
-  background: url("../img/after-mobile@1x.png") no-repeat center top;
-  background-size: contain;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../img/after-mobile@2x.png") no-repeat center top;
-    background-size: contain;
-  }
-}
-
-.cats-slider__input-before:checked ~ .cats-slider__toggles-before::after,
-.cats-slider__input-after:checked ~ .cats-slider__toggles-after::after {
-  position: absolute;
-  left: 56px;
-  bottom: 8px;
-
-  content: "";
-
-  width: 35px;
-  height: 6px;
-
-  border-radius: 8px;
-  background-color: $content-color;
-}
-
-.cats-slider__input-after:checked ~ .cats-slider__toggles-after::after {
-  left: -54px;
-}
-
 .cats-slider__toggles-scale {
-  width: 84px;
-  height: 12px;
-  margin-top: 2px;
+  width: 70px;
+  height: 5px;
+  margin-top: 4px;
+  padding: 4px 7px;
 
   border: 1px solid $border-metrics-color;
-  border-radius: 8px;
+  border-radius: 6px;
 
   background-color: $primary-color;
 }
 
+.cats-slider__toggles-indicator {
+  width: 35px;
+  height: 5px;
+
+  border-radius: 8px;
+
+  background-color: $content-color;
+}
+
+.cats-slider__input-after:checked ~ .cats-slider__toggles .cats-slider__toggles-indicator {
+  margin-left: 35px;
+}
+
 @media (min-width: $tablet-width) {
   .cats-slider {
+    position: relative;
+
     background-image: linear-gradient(90deg, $bg-block-color 50%, $bg-slider 50%);
   }
 
+  .cats-slider__image {
+    position: absolute;
+    left: 48px;
+    top: -167px;
+
+    width: 682px;
+    height: 515px;
+  }
+
   .cats-slider__toggles {
-    padding: 367px 0 0 4px;
-    width: 571px;
+    padding: 361px 0 0 0;
+    width: 569px;
 
     font-size: 20px;
   }
 
-  .cats-slider__input-before:checked ~ .cats-slider__toggles-before::before {
-    left: -59px;
-    top: -520px;
+  .cats-slider__toggles-before,
+  .cats-slider__toggles-after {
+    padding-bottom: 5px;
 
-    width: 677px;
-    height: 499px;
-
-    background: url("../img/before-tablet@1x.png") no-repeat center top;
-    background-size: contain;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/before-tablet@2x.png") no-repeat center top;
-      background-size: contain;
-    }
-  }
-
-  .cats-slider__input-after:checked ~ .cats-slider__toggles-after::before {
-    left: -567px;
-    top: -534px;
-
-    width: 677px;
-    height: 499px;
-
-    background: url("../img/after-tablet@1x.png") no-repeat center top;
-    background-size: contain;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/after-tablet@2x.png") no-repeat center top;
-      background-size: contain;
-    }
+    cursor: pointer;
+    border-bottom: 1px dotted rgba(68, 68, 68, 0.23);
   }
 
   .cats-slider__toggles-scale {
     position: relative;
 
     width: 431px;
-    height: 8px;
+    height: 0px;
     margin-top: 7px;
 
     border: none;
-    border-radius: 8px;
+    border-radius: 4px;
 
-    background-color: $border-metrics-color;
+    background-color: $scale-color;
   }
 
   .cats-slider__toggles-indicator {
     position: absolute;
     left: 0;
-    bottom: -12px;
+    bottom: -15px;
 
-    content: "";
 
     width: 32px;
     height: 32px;
@@ -161,33 +112,28 @@
     border: 1px solid $border-indicator;
     border-radius: 50%;
 
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
     background-color: $primary-color;
+
+    &::before {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+
+      width: 8px;
+      height: 8px;
+
+      content: "";
+
+      border-radius: 50%;
+      background-color: $content-color;
+    }
   }
 
-  .cats-slider__input-after:checked ~ .cats-slider__toggles-scale .cats-slider__toggles-indicator {
-    left: 400px;
-  }
+  .cats-slider__input-after:checked ~ .cats-slider__toggles .cats-slider__toggles-indicator {
+    left: 412px;
 
-  .cats-slider__input-before:checked ~ .cats-slider__toggles-before::after,
-  .cats-slider__input-after:checked ~ .cats-slider__toggles-after::after {
-    position: absolute;
-    z-index: 1;
-    left: 72px;
-    bottom: 5px;
-
-    content: "";
-
-    width: 8px;
-    height: 8px;
-
-    pointer-events: none;
-    border-radius: 50%;
-    background-color: $content-color;
-  }
-
-  .cats-slider__input-after:checked ~ .cats-slider__toggles-after::after {
-    left: -31px;
+    margin-left: 0;
   }
 }
 
@@ -198,6 +144,14 @@
     background-image: none;
   }
 
+  .cats-slider__image {
+    left: 0;
+    top: -188px;
+
+    width: 690px;
+    height: 517px;
+  }
+
   .cats-slider__toggles {
     padding: 367px 0 0 39px;
     align-self: flex-start;
@@ -205,11 +159,6 @@
 
   .cats-slider__toggles-before,
   .cats-slider__toggles-after {
-    padding-bottom: 5px;
-
-    cursor: pointer;
-    border-bottom: 1px dotted rgba(68, 68, 68, 0.23);
-
     &:hover {
       border-bottom: 1px solid rgba(68, 68, 68, 0.4);
     }
@@ -219,60 +168,21 @@
     }
   }
 
-  .cats-slider__input-before:checked ~ .cats-slider__toggles-before::after,
-  .cats-slider__input-after:checked ~ .cats-slider__toggles-after::after {
-    bottom: 10px;
-  }
-
-  .cats-slider__toggles-before:active::after,
-  .cats-slider__toggles-after:active::after {
-    margin-bottom: 1px;
-  }
-
-  .cats-slider__input-before:checked ~ .cats-slider__toggles-before::before {
-    left: -82px;
-    top: -540px;
-
-    pointer-events: none;
-    background: url("../img/before-desktop@1x.png") no-repeat center top;
-    background-size: contain;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/before-desktop@2x.png") no-repeat center top;
-      background-size: contain;
-    }
-  }
-
-  .cats-slider__input-after:checked ~ .cats-slider__toggles-after::before {
-    left: -590px;
-    top: -543px;
-
-    pointer-events: none;
-    background: url("../img/after-desktop@1x.png") no-repeat center top;
-    background-size: contain;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/after-desktop@2x.png") no-repeat center top;
-      background-size: contain;
-    }
-  }
-
-  .cats-slider__input-before:checked:focus ~ .cats-slider__toggles-before,
-  .cats-slider__input-before:checked:focus ~ .cats-slider__toggles-before::after,
-  .cats-slider__input-after:checked:focus ~ .cats-slider__toggles-after {
+  .cats-slider__input-before:checked:focus ~ .cats-slider__toggles .cats-slider__toggles-before,
+  .cats-slider__input-after:checked:focus ~ .cats-slider__toggles .cats-slider__toggles-after {
     outline: #3b99fc auto 5px;
   }
 
   .cats-slider__toggles-scale .cats-slider__toggles-indicator {
     &:hover {
       cursor: pointer;
-      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
     }
 
     &:active {
       margin: 0 0 -1px -1px;
       border: 2px solid $content-color;
-      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.3);
     }
   }
 }

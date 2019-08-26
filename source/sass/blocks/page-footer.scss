@@ -14,6 +14,16 @@
   @include border-bottom;
 }
 
+.page-footer__logo-link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .page-footer__social {
   padding: 20px 0 10px;
 

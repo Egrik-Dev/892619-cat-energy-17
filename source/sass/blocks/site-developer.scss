@@ -8,8 +8,8 @@
   color: $text-color;
   font-family: $second-font;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
+
+  @include links-text;
 }
 
 .site-developer__logo-icon {

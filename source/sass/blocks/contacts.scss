@@ -1,3 +1,7 @@
+.contacts--inner {
+  background-color: $bg-block-color;
+}
+
 .contacts__adress {
   display: flex;
   justify-content: space-between;
@@ -8,8 +12,7 @@
   display: inline-block;
   width: 125px;
 
-  font-size: 16px;
-  line-height: 20px;
+  @include btn-text;
   color: $title-color;
   font-weight: 400;
   text-transform: uppercase;
@@ -28,15 +31,18 @@
 }
 
 @media (min-width: $tablet-width) {
+  .contacts--inner {
+    background-color: $bg-block-color;
+  }
+
   .contacts__adress {
-    padding: 68px 71px 62px;
+    padding: 65px 71px 57px;
   }
 
   .contacts__invite {
     width: 155px;
 
-    font-size: 20px;
-    line-height: 25px;
+    @include bold-text;
   }
 
   .contacts__full-adress {
@@ -52,6 +58,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .contacts--inner {
+    background-color: $primary-color;
+  }
+
   .contacts__wrapper {
     position: relative;
 

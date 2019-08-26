@@ -8,7 +8,47 @@
   border-bottom: 1px solid $border-color;
 }
 
-@mixin big-title {
+@mixin footnote-text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin btn-text {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin links-text {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@mixin form-small-text {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@mixin important-text {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin bold-text {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+@mixin big-footnote-text {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+@mixin small-title-text {
+  font-size: 24px;
+  line-height: 37px;
+}
+
+@mixin big-title-text {
   font-size: 60px;
   line-height: 60px;
 }
@@ -19,6 +59,10 @@
 
 @mixin tablet-wrapper {
   padding: 0 30px;
+}
+
+@mixin tablet-form-wrapper {
+  padding: 0 67px 0 71px;
 }
 
 @mixin desktop-wrapper {

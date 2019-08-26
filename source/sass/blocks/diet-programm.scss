@@ -65,7 +65,7 @@
   }
 
   .diet-programm__title {
-    @include big-title;
+    @include big-title-text;
 
     padding: 0 90px;
     margin-bottom: 41px;
@@ -79,8 +79,7 @@
     padding-left: 90px;
     margin-bottom: 18px;
 
-    font-size: 20px;
-    line-height: 20px;
+    @include important-text;
   }
 
   .diet-programm__select {
@@ -91,8 +90,7 @@
     left: 120px;
     bottom: 530px;
 
-    font-size: 20px;
-    line-height: 20px;
+    @include important-text;
   }
 }
 

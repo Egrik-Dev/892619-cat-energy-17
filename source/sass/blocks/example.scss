@@ -42,9 +42,7 @@
     margin-bottom: 64px;
 
     @include tablet-wrapper;
-
-    font-size: 60px;
-    line-height: 60px;
+    @include big-title-text;
   }
 
   .example__description {

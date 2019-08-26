@@ -14,8 +14,8 @@
   margin-bottom: 8px;
 
   color: $title-color;
-  font-size: 16px;
-  line-height: 20px;
+
+  @include btn-text;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
@@ -25,9 +25,8 @@
   margin: 0 0 20px 0;
 
   font-family: $second-font;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
+
+  @include footnote-text;
   text-align: center;
 }
 
@@ -35,8 +34,8 @@
   align-self: stretch;
 
   color: $text-color;
-  font-size: 16px;
-  line-height: 20px;
+
+  @include btn-text;
 
   background-color: $bg-block-color;
 }
@@ -62,14 +61,9 @@
   .more-goods__description {
     margin-bottom: 87px;
     padding: 0 10px;
-    width: 100%;
+    width: 90%;
 
     font-size: 16px;
-  }
-
-  .more-goods__btn {
-    font-size: 16px;
-    line-height: 20px;
   }
 }
 
@@ -83,6 +77,7 @@
   }
 
   .more-goods__description {
+    width: 100%;
     padding: 0;
   }
 

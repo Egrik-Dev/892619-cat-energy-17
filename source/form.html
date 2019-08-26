@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Форма Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -24,10 +28,123 @@
         </ul>
       </nav>
     </header>
+    <main class="page-main page-main--inner">
+      <h1 class="title page-main__inner-title">Подбор программы</h1>
+      <section class="page-main__form form">
+        <h2 class="visually-hidden">Анкета для подбора программы</h2>
+        <div class="form__container">
+          <b class="form__description">Заполните анкету и мы подберем программу питания для вашего кота</b>
+        </div>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__group form__group--general">
+            <h3 class="visually-hidden">Данные кота</h3>
+            <ul class="form__item-list form__item-list--general">
+              <li class="form__item">
+                <label class="form__label" for="cat-name-field">Имя:*</label>
+                <input class="form__input-text" type="text" name="cat-name" id="cat-name-field" placeholder="БАРСИК" autofocus required>
+              </li>
+              <li class="form__item">
+                <label class="form__label" for="cat-weight-field">Вес (кг):*</label>
+                <input class="form__input-text" type="number" name="cat-weight" id="cat-weight-field" placeholder="7" required>
+              </li>
+              <li class="form__item">
+                <label class="form__label" for="cat-age-field">Возраст (Лет):</label>
+                <input class="form__input-text" type="number" name="cat-age" id="cat-age-field" placeholder="7">
+              </li>
+            </ul>
+            <ul class="form__item-list form__item-list--programm">
+              <li class="form__item form__item--programm">
+                <input class="form__input-radio visually-hidden" type="radio" name="target" id="losing-weight" value="losing-weight" checked>
+                <label class="form__label form__label--radio" for="losing-weight">Похудение</label>
+              </li>
+              <li class="form__item form__item--programm">
+                <input class="form__input-radio visually-hidden" type="radio" name="target" id="mass-gain" value="mass-gain">
+                <label class="form__label form__label--radio" for="mass-gain">Набор массы</label>
+              </li>
+              <li class="form__item form__item--programm">
+                <input class="form__input-radio visually-hidden" type="radio" name="target" id="no-answer" value="no-answer">
+                <label class="form__label form__label--radio" for="no-answer">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </div>
+          <div class="form__group form__group--contacts">
+            <div class="form__container form__container--strip">
+              <h3 class="form__subtitle">Контактные данные (владельца кота)</h3>
+              <ul class="form__item-list form__item-list--contacts">
+                <li class="form__item form__item--contacts">
+                  <label class="form__label" for="email-field">e-mail:*</label>
+                  <input class="form__input-text form__input-text--contacts" type="email" name="email" id="email-field" placeholder="KUKLACHEV@GMAIL.COM" required>
+                  <svg class="form__icon form__icon--email" width="17" height="13">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
+                </li>
+                <li class="form__item form__item--contacts">
+                  <label class="form__label" for="tel-field">Телефон:*</label>
+                  <input class="form__input-text form__input-text--contacts" type="tel" name="tel" id="tel-field" pattern="8\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" required>
+                  <svg class="form__icon form__icon--tel" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form__group form__group--comment">
+            <div class="form__container form__container--strip">
+              <h3 class="form__subtitle">Комментарий</h3>
+              <div class="form__wrapper">
+                <textarea class="form__text-field" name="comment" id="comment-field" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="form__group form__group--additional">
+            <div class="form__container form__container--strip">
+              <h3 class="form__subtitle form__subtitle--additional">Дополнительно</h3>
+              <ul class="form__item-list form__item-list--additional">
+                <li class="form__item form__item--additional">
+                  <input class="form__input-checkbox visually-hidden" type="checkbox" name="sweetener" id="sweetener-box" checked>
+                  <label class="form__label form__label--checkbox" for="sweetener-box">Сахарозаменитель</label>
+                </li>
+                <li class="form__item form__item--additional">
+                  <input class="form__input-checkbox visually-hidden" type="checkbox" name="water" id="water-box">
+                  <label class="form__label form__label--checkbox" for="water-box">Питьевая вода</label>
+                </li>
+                <li class="form__item form__item--additional">
+                  <input class="form__input-checkbox visually-hidden" type="checkbox" name="milk" id="milk-box">
+                  <label class="form__label form__label--checkbox" for="milk-box">Молоко</label>
+                </li>
+                <li class="form__item form__item--additional">
+                  <input class="form__input-checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins-box">
+                  <label class="form__label form__label--checkbox" for="vitamins-box">Витамины</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form__confirmation">
+            <button class="btn form__btn" type="submit" name="send-request">Отправить заявку</button>
+            <p class="form__explanation">* — Обязательные поля</p>
+          </div>
+        </form>
+      </section>
+      <section class="page-main__contacts contacts contacts--inner">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__adress">
+            <b class="contacts__invite">приглашаем <br>к сотрудничеству дилеров!</b>
+            <div class="contacts__full-adress">
+              <p class="contacts__street">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="contacts__city">Санкт-Петербург</p>
+            </div>
+          </div>
+        </div>
+        <div class="page-main__map" id="map"></div>
+      </section>
+    </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <img class="page-footer__logo-image" src="img/icon-logo-footer.svg" width="128" height="24" alt="Логотип Cat-Energy в подвале">
+          <a class="page-footer__logo-link" href="index.html">
+            <img class="page-footer__logo-image" src="img/icon-logo-footer.svg" width="128" height="24" alt="Логотип Cat-Energy в подвале">
+          </a>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">

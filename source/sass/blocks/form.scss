@@ -521,13 +521,16 @@
     margin: 0 auto;
   }
 
-  .form__btn {
+  .form__btn,
+  .form__explanation {
     flex-grow: 0;
+  }
+
+  .form__btn {
     width: 568px;
   }
 
   .form__explanation {
-    flex-grow: 0;
     width: 570px;
   }
 }
